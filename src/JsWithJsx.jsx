@@ -1,11 +1,3 @@
-const person = {
-    name: 'Test Person',
-    theme: {
-      backgroundColor: 'black',
-      color: 'pink'
-    }
-  };
-
 export function Avatar() {
     const avatar = '#';
     const description = 'Description of the image';
@@ -20,6 +12,14 @@ export function Avatar() {
   }
 
   export function TodoList() {
+    const person = {
+        name: 'Test Person',
+        theme: {
+          backgroundColor: 'black',
+          color: 'pink'
+        }
+      };
+
     return (
       <div style={person.theme}>
         <h1>{person.name}&aposs Todos</h1>
