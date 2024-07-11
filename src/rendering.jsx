@@ -12,3 +12,5 @@ export default function Animals() {
       </div>
     );
   }
+
+  //jsx can render arrays
