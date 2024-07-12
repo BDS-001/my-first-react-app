@@ -16,7 +16,7 @@ export default function Animals() {
   //jsx can render arrays
 
   function ListItem(props) {
-    return props.animal.startsWith("L") ? <li>{props.animal}</li> : null
+    return props.animal.startsWith("L") && <li>{props.animal}</li>
   }
   
   function List(props) {
