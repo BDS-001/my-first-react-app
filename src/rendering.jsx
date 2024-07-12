@@ -19,21 +19,37 @@ export default function Animals() {
     return props.animal.startsWith("L") && <li>{props.animal}</li>
   }
   
-  function List(props) {
-    if (!props.animals) {
-      return <div>Loading...</div>;
-    }
+  // function List(props) {
+  //   if (!props.animals) {
+  //     return <div>Loading...</div>;
+  //   }
   
-    if (props.animals.length === 0) {
-      return <div>There are no animals in the list!</div>;
-    }
-    
+  //   if (props.animals.length === 0) {
+  //     return <div>There are no animals in the list!</div>;
+  //   }
+
+  //   return (
+  //     <ul>
+  //       {props.animals.map((animal) => {
+  //         return <ListItem key={animal} animal={animal} />;
+  //       })}
+  //     </ul>
+  //   );
+  // }
+
+  function List(props) {
     return (
-      <ul>
-        {props.animals.map((animal) => {
-          return <ListItem key={animal} animal={animal} />;
-        })}
-      </ul>
+      <>
+        {!props.animals && <div>Loading...</div>}
+        {props.animals && props.animals.length > 0 && (
+          <ul>
+            {props.animals.map((animal) => {
+              return <ListItem key={animal} animal={animal} />;
+            })}
+          </ul>
+        )}
+        {props.animals && props.animals.length === 0 && <div>There are no animals in the list!</div>}
+      </>
     );
   }
   
