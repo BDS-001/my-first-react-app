@@ -13,3 +13,5 @@ const todos = [
       </ul>
     );
   }
+
+  //not reccommended to use array index, list can change
