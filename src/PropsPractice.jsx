@@ -5,13 +5,13 @@ function Button({text = 'Click Me!', color = 'blue', fontSize = 12, handleClick}
     }
 
     return (
-        <button onClick={handleClick} style={buttonStyle}>{text}</button>
+        <button onClick={() => handleClick('https://www.theodinproject.com/lessons/node-path-react-new-passing-data-between-components')} style={buttonStyle}>{text}</button>
     );
 }
 
 export function App() {
-    const handleButtonClick = () => {
-        window.location.href = 'https://www.theodinproject.com/lessons/node-path-react-new-passing-data-between-components'
+    const handleButtonClick = (url) => {
+        window.location.href = url
     }
 
     return (
