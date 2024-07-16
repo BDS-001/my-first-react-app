@@ -5,6 +5,10 @@ function Button({text = 'Click Me!', color = 'blue', fontSize = 12, handleClick}
     }
 
     return (
+        //when using arguments to function you must use aon function instead of just the function
+        // onClick={handleClick('https://www.theodinproject.com/lessons/node-path-react-new-passing-data-between-components'))
+        // above will call the function right away instead of only when the button is clicked
+         
         <button onClick={() => handleClick('https://www.theodinproject.com/lessons/node-path-react-new-passing-data-between-components')} style={buttonStyle}>{text}</button>
     );
 }
