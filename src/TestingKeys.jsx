@@ -15,3 +15,4 @@ const todos = [
   }
 
   //not reccommended to use array index, list can change
+  // do not do this: <li key={uuid()}>{todo.task}</li>, the keys must not be generated during rendering only when data is collected
