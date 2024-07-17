@@ -60,3 +60,18 @@ function Person() {
       </>
     );
   }
+
+  //this function will only increase the age based on current state
+  // state only changes when webpage is rerendered
+  //canot change the value multiple times this way
+  let handleIncreaseAge = () => {
+    setPerson({ ...person, age: person.age + 1 });
+    setPerson({ ...person, age: person.age + 1 });
+  };
+  
+  // this lets you update with the new state
+  // when you add a callback to setPerson the altes state automatically gets passed in
+  handleIncreaseAge = () => {
+    setPerson((prevPerson) => ({ ...prevPerson, age: prevPerson.age + 1 }));
+    setPerson((prevPerson) => ({ ...prevPerson, age: prevPerson.age + 1 }));
+  };
