@@ -42,6 +42,19 @@ class Test extends Component {
         }));
       }
 
+
+      componentDidMount() {
+        //used as soon as component is mounted, fetching data should go in tis section
+      }
+
+      componentDidUpdate() {
+        //if you need something to happend when state changes it would go in this section
+      }
+
+      componentWillUnmount() {
+        //before the componen is destroyed this will run, put any cleanup action in here suh as removing network requests
+      }
+
     //need top use render method to render jsx with classes
     render() {
         return (
